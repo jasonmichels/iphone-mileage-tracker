@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C1F083016B9C4C600CF015B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F082F16B9C4C600CF015B /* UIKit.framework */; };
+		1C1F083216B9C4C600CF015B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F083116B9C4C600CF015B /* Foundation.framework */; };
+		1C1F083416B9C4C600CF015B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F083316B9C4C600CF015B /* CoreGraphics.framework */; };
+		1C1F083A16B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F083816B9C4C700CF015B /* InfoPlist.strings */; };
+		1C1F083C16B9C4C700CF015B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F083B16B9C4C700CF015B /* main.m */; };
+		1C1F084016B9C4C700CF015B /* trackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F083F16B9C4C700CF015B /* trackerAppDelegate.m */; };
+		1C1F084216B9C4C700CF015B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084116B9C4C700CF015B /* Default.png */; };
+		1C1F084416B9C4C700CF015B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084316B9C4C700CF015B /* Default@2x.png */; };
+		1C1F084616B9C4C700CF015B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084516B9C4C700CF015B /* Default-568h@2x.png */; };
+		1C1F084916B9C4C700CF015B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084716B9C4C700CF015B /* MainStoryboard.storyboard */; };
+		1C1F084C16B9C4C700CF015B /* trackerFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F084B16B9C4C700CF015B /* trackerFirstViewController.m */; };
+		1C1F084E16B9C4C700CF015B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084D16B9C4C700CF015B /* first.png */; };
+		1C1F085016B9C4C700CF015B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F084F16B9C4C700CF015B /* first@2x.png */; };
+		1C1F085316B9C4C700CF015B /* trackerSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F085216B9C4C700CF015B /* trackerSecondViewController.m */; };
+		1C1F085516B9C4C700CF015B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F085416B9C4C700CF015B /* second.png */; };
+		1C1F085716B9C4C700CF015B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F085616B9C4C700CF015B /* second@2x.png */; };
+		1C1F085F16B9C4C700CF015B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F085E16B9C4C700CF015B /* SenTestingKit.framework */; };
+		1C1F086016B9C4C700CF015B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F082F16B9C4C600CF015B /* UIKit.framework */; };
+		1C1F086116B9C4C700CF015B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F083116B9C4C600CF015B /* Foundation.framework */; };
+		1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F086716B9C4C700CF015B /* InfoPlist.strings */; };
+		1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C1F086216B9C4C700CF015B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C1F082216B9C4C600CF015B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C1F082A16B9C4C600CF015B;
+			remoteInfo = truckMileageTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = truckMileageTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1F082F16B9C4C600CF015B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1C1F083116B9C4C600CF015B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C1F083316B9C4C600CF015B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1C1F083716B9C4C700CF015B /* truckMileageTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "truckMileageTracker-Info.plist"; sourceTree = "<group>"; };
+		1C1F083916B9C4C700CF015B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C1F083B16B9C4C700CF015B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C1F083D16B9C4C700CF015B /* truckMileageTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "truckMileageTracker-Prefix.pch"; sourceTree = "<group>"; };
+		1C1F083E16B9C4C700CF015B /* trackerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackerAppDelegate.h; sourceTree = "<group>"; };
+		1C1F083F16B9C4C700CF015B /* trackerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trackerAppDelegate.m; sourceTree = "<group>"; };
+		1C1F084116B9C4C700CF015B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1C1F084316B9C4C700CF015B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1C1F084516B9C4C700CF015B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1C1F084816B9C4C700CF015B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1C1F084A16B9C4C700CF015B /* trackerFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackerFirstViewController.h; sourceTree = "<group>"; };
+		1C1F084B16B9C4C700CF015B /* trackerFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trackerFirstViewController.m; sourceTree = "<group>"; };
+		1C1F084D16B9C4C700CF015B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		1C1F084F16B9C4C700CF015B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		1C1F085116B9C4C700CF015B /* trackerSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trackerSecondViewController.h; sourceTree = "<group>"; };
+		1C1F085216B9C4C700CF015B /* trackerSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = trackerSecondViewController.m; sourceTree = "<group>"; };
+		1C1F085416B9C4C700CF015B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		1C1F085616B9C4C700CF015B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		1C1F085D16B9C4C700CF015B /* truckMileageTrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = truckMileageTrackerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1F085E16B9C4C700CF015B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1C1F086616B9C4C700CF015B /* truckMileageTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "truckMileageTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		1C1F086816B9C4C700CF015B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truckMileageTrackerTests.h; sourceTree = "<group>"; };
+		1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truckMileageTrackerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C1F082816B9C4C600CF015B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F083016B9C4C600CF015B /* UIKit.framework in Frameworks */,
+				1C1F083216B9C4C600CF015B /* Foundation.framework in Frameworks */,
+				1C1F083416B9C4C600CF015B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C1F085916B9C4C700CF015B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F085F16B9C4C700CF015B /* SenTestingKit.framework in Frameworks */,
+				1C1F086016B9C4C700CF015B /* UIKit.framework in Frameworks */,
+				1C1F086116B9C4C700CF015B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C1F082016B9C4C600CF015B = {
+			isa = PBXGroup;
+			children = (
+				1C1F083516B9C4C700CF015B /* truckMileageTracker */,
+				1C1F086416B9C4C700CF015B /* truckMileageTrackerTests */,
+				1C1F082E16B9C4C600CF015B /* Frameworks */,
+				1C1F082C16B9C4C600CF015B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C1F082C16B9C4C600CF015B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */,
+				1C1F085D16B9C4C700CF015B /* truckMileageTrackerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C1F082E16B9C4C600CF015B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F082F16B9C4C600CF015B /* UIKit.framework */,
+				1C1F083116B9C4C600CF015B /* Foundation.framework */,
+				1C1F083316B9C4C600CF015B /* CoreGraphics.framework */,
+				1C1F085E16B9C4C700CF015B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C1F083516B9C4C700CF015B /* truckMileageTracker */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F083E16B9C4C700CF015B /* trackerAppDelegate.h */,
+				1C1F083F16B9C4C700CF015B /* trackerAppDelegate.m */,
+				1C1F084716B9C4C700CF015B /* MainStoryboard.storyboard */,
+				1C1F084A16B9C4C700CF015B /* trackerFirstViewController.h */,
+				1C1F084B16B9C4C700CF015B /* trackerFirstViewController.m */,
+				1C1F084D16B9C4C700CF015B /* first.png */,
+				1C1F084F16B9C4C700CF015B /* first@2x.png */,
+				1C1F085116B9C4C700CF015B /* trackerSecondViewController.h */,
+				1C1F085216B9C4C700CF015B /* trackerSecondViewController.m */,
+				1C1F085416B9C4C700CF015B /* second.png */,
+				1C1F085616B9C4C700CF015B /* second@2x.png */,
+				1C1F083616B9C4C700CF015B /* Supporting Files */,
+			);
+			path = truckMileageTracker;
+			sourceTree = "<group>";
+		};
+		1C1F083616B9C4C700CF015B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F083716B9C4C700CF015B /* truckMileageTracker-Info.plist */,
+				1C1F083816B9C4C700CF015B /* InfoPlist.strings */,
+				1C1F083B16B9C4C700CF015B /* main.m */,
+				1C1F083D16B9C4C700CF015B /* truckMileageTracker-Prefix.pch */,
+				1C1F084116B9C4C700CF015B /* Default.png */,
+				1C1F084316B9C4C700CF015B /* Default@2x.png */,
+				1C1F084516B9C4C700CF015B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C1F086416B9C4C700CF015B /* truckMileageTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */,
+				1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */,
+				1C1F086516B9C4C700CF015B /* Supporting Files */,
+			);
+			path = truckMileageTrackerTests;
+			sourceTree = "<group>";
+		};
+		1C1F086516B9C4C700CF015B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C1F086616B9C4C700CF015B /* truckMileageTrackerTests-Info.plist */,
+				1C1F086716B9C4C700CF015B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C1F082A16B9C4C600CF015B /* truckMileageTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C1F086F16B9C4C700CF015B /* Build configuration list for PBXNativeTarget "truckMileageTracker" */;
+			buildPhases = (
+				1C1F082716B9C4C600CF015B /* Sources */,
+				1C1F082816B9C4C600CF015B /* Frameworks */,
+				1C1F082916B9C4C600CF015B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = truckMileageTracker;
+			productName = truckMileageTracker;
+			productReference = 1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C1F085C16B9C4C700CF015B /* truckMileageTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C1F087216B9C4C700CF015B /* Build configuration list for PBXNativeTarget "truckMileageTrackerTests" */;
+			buildPhases = (
+				1C1F085816B9C4C700CF015B /* Sources */,
+				1C1F085916B9C4C700CF015B /* Frameworks */,
+				1C1F085A16B9C4C700CF015B /* Resources */,
+				1C1F085B16B9C4C700CF015B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C1F086316B9C4C700CF015B /* PBXTargetDependency */,
+			);
+			name = truckMileageTrackerTests;
+			productName = truckMileageTrackerTests;
+			productReference = 1C1F085D16B9C4C700CF015B /* truckMileageTrackerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C1F082216B9C4C600CF015B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = tracker;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jason Michels";
+			};
+			buildConfigurationList = 1C1F082516B9C4C600CF015B /* Build configuration list for PBXProject "truckMileageTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C1F082016B9C4C600CF015B;
+			productRefGroup = 1C1F082C16B9C4C600CF015B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C1F082A16B9C4C600CF015B /* truckMileageTracker */,
+				1C1F085C16B9C4C700CF015B /* truckMileageTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C1F082916B9C4C600CF015B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F083A16B9C4C700CF015B /* InfoPlist.strings in Resources */,
+				1C1F084216B9C4C700CF015B /* Default.png in Resources */,
+				1C1F084416B9C4C700CF015B /* Default@2x.png in Resources */,
+				1C1F084616B9C4C700CF015B /* Default-568h@2x.png in Resources */,
+				1C1F084916B9C4C700CF015B /* MainStoryboard.storyboard in Resources */,
+				1C1F084E16B9C4C700CF015B /* first.png in Resources */,
+				1C1F085016B9C4C700CF015B /* first@2x.png in Resources */,
+				1C1F085516B9C4C700CF015B /* second.png in Resources */,
+				1C1F085716B9C4C700CF015B /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C1F085A16B9C4C700CF015B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C1F085B16B9C4C700CF015B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C1F082716B9C4C600CF015B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F083C16B9C4C700CF015B /* main.m in Sources */,
+				1C1F084016B9C4C700CF015B /* trackerAppDelegate.m in Sources */,
+				1C1F084C16B9C4C700CF015B /* trackerFirstViewController.m in Sources */,
+				1C1F085316B9C4C700CF015B /* trackerSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C1F085816B9C4C700CF015B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C1F086316B9C4C700CF015B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C1F082A16B9C4C600CF015B /* truckMileageTracker */;
+			targetProxy = 1C1F086216B9C4C700CF015B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C1F083816B9C4C700CF015B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C1F083916B9C4C700CF015B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C1F084716B9C4C700CF015B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C1F084816B9C4C700CF015B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1C1F086716B9C4C700CF015B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C1F086816B9C4C700CF015B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C1F086D16B9C4C700CF015B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C1F086E16B9C4C700CF015B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C1F087016B9C4C700CF015B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
+				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C1F087116B9C4C700CF015B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
+				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1C1F087316B9C4C700CF015B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/truckMileageTracker.app/truckMileageTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
+				INFOPLIST_FILE = "truckMileageTrackerTests/truckMileageTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1C1F087416B9C4C700CF015B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/truckMileageTracker.app/truckMileageTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
+				INFOPLIST_FILE = "truckMileageTrackerTests/truckMileageTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C1F082516B9C4C600CF015B /* Build configuration list for PBXProject "truckMileageTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C1F086D16B9C4C700CF015B /* Debug */,
+				1C1F086E16B9C4C700CF015B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C1F086F16B9C4C700CF015B /* Build configuration list for PBXNativeTarget "truckMileageTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C1F087016B9C4C700CF015B /* Debug */,
+				1C1F087116B9C4C700CF015B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1C1F087216B9C4C700CF015B /* Build configuration list for PBXNativeTarget "truckMileageTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C1F087316B9C4C700CF015B /* Debug */,
+				1C1F087416B9C4C700CF015B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C1F082216B9C4C600CF015B /* Project object */;
+}
