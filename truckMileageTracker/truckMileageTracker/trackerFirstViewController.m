@@ -17,7 +17,7 @@
 @synthesize mileagePicker;
 @synthesize mileageData;
 @synthesize pickerData;
-@synthesize statePicked;
+@synthesize state;
 @synthesize stateLabel;
 @synthesize selectButton;
 @synthesize fileMileage;
@@ -31,52 +31,52 @@
 -(IBAction)buttonPressed:(id)sender{
     //This is for the state
     NSInteger stateRow = [statePicker selectedRowInComponent:0];
-    self.statePicked = [pickerData objectAtIndex:stateRow];
+    self.state = [pickerData objectAtIndex:stateRow];
     
     if( statePicker.hidden == false){
         
         self.statePicker.hidden = true;
         self.mileagePicker.hidden = false;
-        self.stateLabel.text = self.statePicked;
+        self.stateLabel.text = self.state;
         self.stateLabel.hidden = false;
         [self.selectButton setTitle:@"Select Mileage" forState:UIControlStateNormal];
         
     }else{
-
+        
         //create a dictionary with an item for each number and state
         NSMutableDictionary *newRow = [NSMutableDictionary new];
-        [newRow setObject: self.statePicked forKey: state];
+        [newRow setObject: self.state forKey: @"state"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:0]]
-                   forKey: mileOne];
+                   forKey: @"mileOne"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:1]]
-                   forKey: mileTwo];
+                   forKey: @"mileTwo"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:2]]
-                   forKey: mileThree];
+                   forKey: @"mileThree"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:3]]
-                   forKey: mileFour];
+                   forKey: @"mileFour"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:4]]
-                   forKey: mileFive];
+                   forKey: @"mileFive"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:5]]
-                   forKey: mileSix];
+                   forKey: @"mileSix"];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:6]]
-                   forKey: mileSeven];
+                   forKey: @"mileSeven"];
         
-        NSMutableString *finalMileageRow = [[NSString stringWithFormat:@"%@%@%@%@%@%@%@",
-                                                 [newRow objectForKey:mileOne],
-                                                 [newRow objectForKey:mileTwo],
-                                                 [newRow objectForKey:mileThree],
-                                                 [newRow objectForKey:mileFour],
-                                                 [newRow objectForKey:mileFive],
-                                                 [newRow objectForKey:mileSix],
-                                                 [newRow objectForKey:mileSeven]] mutableCopy];
+        NSMutableString *finalMileage = [[NSString stringWithFormat:@"%@%@%@%@%@%@%@",
+                                                 [newRow objectForKey:@"mileOne"],
+                                                 [newRow objectForKey:@"mileTwo"],
+                                                 [newRow objectForKey:@"mileThree"],
+                                                 [newRow objectForKey:@"mileFour"],
+                                                 [newRow objectForKey:@"mileFive"],
+                                                 [newRow objectForKey:@"mileSix"],
+                                                 [newRow objectForKey:@"mileSeven"]] mutableCopy];
         
-        [newRow setObject:[NSNumber numberWithInt:[finalMileageRow intValue]] forKey:finalMileage];
+        [newRow setObject:[NSNumber numberWithInt:[finalMileage intValue]] forKey:@"finalMileage"];
         
         //add the dictionary to the array before saving to file
         [self.fileMileage addObject:newRow];
         [self.fileMileage writeToFile:[self dataFilePath] atomically:YES];
         
-        NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved.", self.statePicked, finalMileageRow] mutableCopy];
+        NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved.", self.state, finalMileage] mutableCopy];
 
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"State & Mileage Saved" message:savedMessage delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
         
@@ -102,50 +102,27 @@
     }
     
     //get list of states to show in picker
-    NSString *statesPath = [[NSBundle mainBundle] pathForResource:
-                      @"states" ofType:@"plist"];
-    self.pickerData = [[NSArray alloc] initWithContentsOfFile:statesPath];
+    NSArray *states = [[NSArray  alloc] initWithObjects:@"Alaska", @"Alabama", @"Minnesota", @"Iowa", @"Nebraska", @"Texas", @"South Dakota", nil, nil];
+    self.pickerData = states;
     
-    //get the count of fileMileages
-    NSInteger fileMileageCount = [self.fileMileage count];
-    NSString *savedState;
-    NSArray *defaultMileageArray;
-    
-    if(fileMileageCount > 0){
-        //now get the last mileage
-        NSDictionary *lastMileage = [ fileMileage objectAtIndex:(fileMileageCount - 1)];
-        //this savedState will come from database previous choice
-        savedState = [lastMileage objectForKey:state];
-        
-        defaultMileageArray = [[NSArray alloc]
-                             initWithObjects:
-                                [lastMileage objectForKey:mileOne],
-                                [lastMileage objectForKey:mileTwo],
-                                [lastMileage objectForKey:mileThree],
-                                [lastMileage objectForKey:mileFour],
-                                [lastMileage objectForKey:mileFive],
-                                [lastMileage objectForKey:mileSix],
-                                [lastMileage objectForKey:mileSeven],
-                                nil];
-        
-    }else{
-        savedState = defaultState;
-        //default array of numbers to show
-        defaultMileageArray = [[NSArray alloc]
-                                      initWithObjects:zero, zero, zero, zero, zero, zero, zero, nil];
-    }
-    
+    //this savedState will come from database previous choice
+    NSString *savedState = @"Iowa";
     //now find the state in the states array
-    NSInteger selectedState = [self.pickerData indexOfObject:savedState];
+    NSInteger selectedState = [states indexOfObject:savedState];
     //set the state row based on previous selection
     [self.statePicker selectRow:selectedState inComponent:0 animated:YES];
     
     //get array of last saved mileage
-    self.mileageData = [[NSArray alloc] initWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", nil];
+    NSArray *mileageArray = [[NSArray alloc] initWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", nil];
+    self.mileageData = mileageArray;
+    
+    //this info will need to come from database
+    NSArray *savedMileageArray = [[NSArray alloc]
+                                  initWithObjects:@"0", @"8", @"5", @"9", @"2", @"3", @"1", nil];
     
     for(int i = 0; i < 7; i++) {
         //get the choice from the saved mileage array and get the intValue to set the component row
-        [self.mileagePicker selectRow:[[defaultMileageArray objectAtIndex:i] intValue] inComponent:i animated:YES];
+        [self.mileagePicker selectRow:[[savedMileageArray objectAtIndex:i] intValue] inComponent:i animated:YES];
     }
 
     [super viewDidLoad];

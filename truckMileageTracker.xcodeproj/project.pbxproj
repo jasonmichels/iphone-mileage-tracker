@@ -28,6 +28,7 @@
 		1C1F086116B9C4C700CF015B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F083116B9C4C600CF015B /* Foundation.framework */; };
 		1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F086716B9C4C700CF015B /* InfoPlist.strings */; };
 		1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */; };
+		1C589BC316BCB4EF00F7714D /* states.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C589BC216BCB4EF00F7714D /* states.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		1C1F086816B9C4C700CF015B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truckMileageTrackerTests.h; sourceTree = "<group>"; };
 		1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truckMileageTrackerTests.m; sourceTree = "<group>"; };
+		1C589BC216BCB4EF00F7714D /* states.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = states.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		1C1F083616B9C4C700CF015B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C589BC216BCB4EF00F7714D /* states.plist */,
 				1C1F083716B9C4C700CF015B /* truckMileageTracker-Info.plist */,
 				1C1F083816B9C4C700CF015B /* InfoPlist.strings */,
 				1C1F083B16B9C4C700CF015B /* main.m */,
@@ -258,6 +261,7 @@
 				1C1F085016B9C4C700CF015B /* first@2x.png in Resources */,
 				1C1F085516B9C4C700CF015B /* second.png in Resources */,
 				1C1F085716B9C4C700CF015B /* second@2x.png in Resources */,
+				1C589BC316BCB4EF00F7714D /* states.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +474,7 @@
 				1C1F087116B9C4C700CF015B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C1F087216B9C4C700CF015B /* Build configuration list for PBXNativeTarget "truckMileageTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +483,7 @@
 				1C1F087416B9C4C700CF015B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
