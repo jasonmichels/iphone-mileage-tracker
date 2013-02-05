@@ -25,6 +25,7 @@
 -(NSString *)dataFilePath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSLog(@"%@", documentsDirectory);
     return [documentsDirectory stringByAppendingPathComponent:kFilename];
 }
 
@@ -34,7 +35,7 @@
     self.statePicked = [pickerData objectAtIndex:stateRow];
     
     if( statePicker.hidden == false){
-        
+        //the state picker is shown right now so hide it
         self.statePicker.hidden = true;
         self.mileagePicker.hidden = false;
         self.stateLabel.text = self.statePicked;
@@ -60,6 +61,12 @@
                    forKey: mileSix];
         [newRow setObject: [mileageData objectAtIndex:[mileagePicker selectedRowInComponent:6]]
                    forKey: mileSeven];
+        
+        //save the date information
+        NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
+        [newRow setObject: [NSString stringWithFormat:@"%d", [components day]] forKey: @"day"];
+        [newRow setObject: [NSString stringWithFormat:@"%d", [components month]] forKey: @"month"];
+        [newRow setObject: [NSString stringWithFormat:@"%d", [components year]] forKey: @"year"];
         
         NSMutableString *finalMileageRow = [[NSString stringWithFormat:@"%@%@%@%@%@%@%@",
                                                  [newRow objectForKey:mileOne],

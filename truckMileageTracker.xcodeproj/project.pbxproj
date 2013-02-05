@@ -29,6 +29,7 @@
 		1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F086716B9C4C700CF015B /* InfoPlist.strings */; };
 		1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */; };
 		1C589BC316BCB4EF00F7714D /* states.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C589BC216BCB4EF00F7714D /* states.plist */; };
+		1C93570916C0746E0077A548 /* MileageStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C93570816C0746E0077A548 /* MileageStats.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truckMileageTrackerTests.h; sourceTree = "<group>"; };
 		1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truckMileageTrackerTests.m; sourceTree = "<group>"; };
 		1C589BC216BCB4EF00F7714D /* states.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = states.plist; sourceTree = "<group>"; };
+		1C93570716C0746E0077A548 /* MileageStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileageStats.h; sourceTree = "<group>"; };
+		1C93570816C0746E0077A548 /* MileageStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MileageStats.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				1C1F085416B9C4C700CF015B /* second.png */,
 				1C1F085616B9C4C700CF015B /* second@2x.png */,
 				1C1F083616B9C4C700CF015B /* Supporting Files */,
+				1C93570716C0746E0077A548 /* MileageStats.h */,
+				1C93570816C0746E0077A548 /* MileageStats.m */,
 			);
 			path = truckMileageTracker;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				1C1F084016B9C4C700CF015B /* trackerAppDelegate.m in Sources */,
 				1C1F084C16B9C4C700CF015B /* trackerFirstViewController.m in Sources */,
 				1C1F085316B9C4C700CF015B /* trackerSecondViewController.m in Sources */,
+				1C93570916C0746E0077A548 /* MileageStats.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
