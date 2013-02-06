@@ -135,14 +135,11 @@
 //        for ( id key in self.finalStats) {
 //            NSMutableDictionary *row = [self.finalStats objectForKey:key];
 //            NSLog(@"%@", row);
-    
+//    
 //            for ( id test in row) {
 //                NSLog(@"Test stuff %@", test);
 //            }
 //            NSLog(@"--------------------------");
-            
-//            NSString *state = [row objectForKey:@"state"];
-//            NSLog(@"Here is state: %@", state);
 //        }
 
     return self.returnResults;

@@ -18,10 +18,11 @@
                                     <outlet property="delegate" destination="2" id="iy5-7l-lAa"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onS-Pp-HqM">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onS-Pp-HqM">
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.25"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Choose State">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Select State">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -34,7 +35,7 @@
                             <pickerView hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-td-YDR" userLabel="MileagePicker">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="f17-N0-dbD"/>
+                                    <constraint firstAttribute="height" constant="216" id="QMp-Z5-kmv"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="bh3-zY-nn8"/>
@@ -49,21 +50,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="0y0-bx-Pbt"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="2PW-nQ-dUw"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="bottom" secondItem="27t-E7-D36" secondAttribute="bottom" type="default" id="BBH-wN-K3F"/>
-                            <constraint firstAttribute="bottom" secondItem="onS-Pp-HqM" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ITL-np-cua"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="LBV-qz-Fmz"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UYj-6V-DH3"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="VkJ-dM-l34"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="Z1K-6h-ejT"/>
-                            <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lU1-B7-JVg"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="ui9-yi-aqR"/>
-                            <constraint firstAttribute="bottom" secondItem="INz-8U-8xo" secondAttribute="bottom" constant="91" id="viE-k7-TBl"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="centerX" secondItem="INz-8U-8xo" secondAttribute="centerX" type="default" id="wd5-3x-oQm"/>
+                            <constraint firstItem="27t-E7-D36" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="1Ef-bO-KsH"/>
+                            <constraint firstItem="27t-E7-D36" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="Btj-zq-jUD"/>
+                            <constraint firstItem="27t-E7-D36" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="COW-8D-3k4"/>
+                            <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LCb-3E-SBF"/>
+                            <constraint firstItem="UhO-td-YDR" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="W4g-FL-qIn"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W9D-ZD-q0P"/>
+                            <constraint firstAttribute="bottom" secondItem="onS-Pp-HqM" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="f39-F4-hj0"/>
+                            <constraint firstItem="UhO-td-YDR" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="f93-GS-ThO"/>
+                            <constraint firstItem="INz-8U-8xo" firstAttribute="centerX" secondItem="onS-Pp-HqM" secondAttribute="centerX" type="default" id="gVc-S0-xzJ"/>
+                            <constraint firstItem="UhO-td-YDR" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="kci-ex-YPL"/>
+                            <constraint firstAttribute="bottom" secondItem="INz-8U-8xo" secondAttribute="bottom" constant="87" id="nHA-R8-FpR"/>
+                            <constraint firstItem="27t-E7-D36" firstAttribute="bottom" secondItem="UhO-td-YDR" secondAttribute="bottom" type="default" id="qZw-w8-DZo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="7"/>
                     <connections>
                         <outlet property="mileagePicker" destination="UhO-td-YDR" id="gSK-l2-GvG"/>
                         <outlet property="selectButton" destination="onS-Pp-HqM" id="sMF-1X-HNG"/>
@@ -73,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="653" y="-167"/>
         </scene>
         <!--Tracker Second View Controller - Second-->
         <scene sceneID="13">
@@ -83,15 +84,18 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Statistics Page" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzw-Qx-lJL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="0iA-Xm-aUf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3" id="z4q-Sf-qqI"/>
+                                    <outlet property="delegate" destination="3" id="iv5-qO-9zK"/>
+                                </connections>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsZ-uA-DaZ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Show Statistics">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -102,29 +106,44 @@
                                     <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="xWO-y3-Dag"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Ay-2YJ">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Ay-2YJ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="lHa-9R-JvA"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="3" id="lpD-mW-D5u"/>
                                     <outlet property="delegate" destination="3" id="7Gr-Er-a6i"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quarter - Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-nj-OFL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="Emi-Ay-2YJ" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CPx-es-9gz"/>
-                            <constraint firstItem="WsZ-uA-DaZ" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JRS-aJ-PN2"/>
-                            <constraint firstItem="WsZ-uA-DaZ" firstAttribute="top" secondItem="Emi-Ay-2YJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cf5-Qh-9DQ"/>
-                            <constraint firstItem="Emi-Ay-2YJ" firstAttribute="top" secondItem="22" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fqW-Xl-FAx"/>
-                            <constraint firstAttribute="trailing" secondItem="WsZ-uA-DaZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="nXF-IT-EN2"/>
-                            <constraint firstAttribute="bottom" secondItem="WsZ-uA-DaZ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="oOQ-3U-0p2"/>
-                            <constraint firstItem="22" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pcB-MU-FnV"/>
-                            <constraint firstAttribute="trailing" secondItem="Emi-Ay-2YJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r7s-H6-umu"/>
-                            <constraint firstAttribute="trailing" secondItem="22" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uc7-qR-WQI"/>
-                            <constraint firstItem="22" firstAttribute="top" secondItem="17" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xEj-mc-5wh"/>
+                            <constraint firstAttribute="trailing" secondItem="WsZ-uA-DaZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ws-0a-2fy"/>
+                            <constraint firstItem="Emi-Ay-2YJ" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="MdD-qa-dUd"/>
+                            <constraint firstItem="WsZ-uA-DaZ" firstAttribute="top" secondItem="zOU-nj-OFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RRT-nQ-07P"/>
+                            <constraint firstItem="zOU-nj-OFL" firstAttribute="centerX" secondItem="WsZ-uA-DaZ" secondAttribute="centerX" type="default" id="S1y-hB-Pyf"/>
+                            <constraint firstAttribute="bottom" secondItem="WsZ-uA-DaZ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="UbZ-ZK-mo6"/>
+                            <constraint firstItem="Emi-Ay-2YJ" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="XRk-DK-7h5"/>
+                            <constraint firstItem="qzw-Qx-lJL" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="g0B-Co-Ij9"/>
+                            <constraint firstItem="qzw-Qx-lJL" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="ioD-tf-6ck"/>
+                            <constraint firstItem="WsZ-uA-DaZ" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jpV-W7-z02"/>
+                            <constraint firstItem="qzw-Qx-lJL" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="v07-0G-2Gk"/>
+                            <constraint firstItem="Emi-Ay-2YJ" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="waV-o1-gmV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="6"/>
+                    <connections>
+                        <outlet property="quarterYearLabel" destination="zOU-nj-OFL" id="5Rf-gx-njJ"/>
+                        <outlet property="selectButton" destination="WsZ-uA-DaZ" id="pNI-ch-gUM"/>
+                        <outlet property="table" destination="Emi-Ay-2YJ" id="zYA-g3-2IO"/>
+                        <outlet property="timePicker" destination="qzw-Qx-lJL" id="OO8-N2-hyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,10 +169,6 @@
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="first" width="16" height="16"/>
-        <image name="second" width="16" height="16"/>
-    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
@@ -172,7 +187,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerSecondViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="quarterYearLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timePicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
     </classes>

@@ -28,6 +28,7 @@
 		1C1F086116B9C4C700CF015B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1F083116B9C4C600CF015B /* Foundation.framework */; };
 		1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F086716B9C4C700CF015B /* InfoPlist.strings */; };
 		1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */; };
+		1C3F4E4B16C1E5F2008CD3F7 /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3F4E4A16C1E5F2008CD3F7 /* whiteButton.png */; };
 		1C589BC316BCB4EF00F7714D /* states.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C589BC216BCB4EF00F7714D /* states.plist */; };
 		1C93570916C0746E0077A548 /* MileageStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C93570816C0746E0077A548 /* MileageStats.m */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		1C1F086816B9C4C700CF015B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truckMileageTrackerTests.h; sourceTree = "<group>"; };
 		1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truckMileageTrackerTests.m; sourceTree = "<group>"; };
+		1C3F4E4A16C1E5F2008CD3F7 /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
 		1C589BC216BCB4EF00F7714D /* states.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = states.plist; sourceTree = "<group>"; };
 		1C93570716C0746E0077A548 /* MileageStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileageStats.h; sourceTree = "<group>"; };
 		1C93570816C0746E0077A548 /* MileageStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MileageStats.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		1C1F083616B9C4C700CF015B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C3F4E4A16C1E5F2008CD3F7 /* whiteButton.png */,
 				1C589BC216BCB4EF00F7714D /* states.plist */,
 				1C1F083716B9C4C700CF015B /* truckMileageTracker-Info.plist */,
 				1C1F083816B9C4C700CF015B /* InfoPlist.strings */,
@@ -267,6 +270,7 @@
 				1C1F085516B9C4C700CF015B /* second.png in Resources */,
 				1C1F085716B9C4C700CF015B /* second@2x.png in Resources */,
 				1C589BC316BCB4EF00F7714D /* states.plist in Resources */,
+				1C3F4E4B16C1E5F2008CD3F7 /* whiteButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
 				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -422,6 +427,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
 				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
