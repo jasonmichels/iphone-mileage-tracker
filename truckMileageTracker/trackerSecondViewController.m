@@ -33,7 +33,19 @@
         NSInteger quarterRow = [timePicker selectedRowInComponent:kQuarterComponent];
         NSInteger yearRow = [timePicker selectedRowInComponent:kYearComponenet];
         
-        NSString *quarter = [self.quarters objectAtIndex:quarterRow];
+        NSString *quarter;
+        NSString *tmpQuarter = [self.quarters objectAtIndex:quarterRow];
+        
+        if( tmpQuarter == @"1st Quarter" ){
+            quarter = @"1";
+        }else if ( tmpQuarter == @"2nd Quarter"){
+            quarter = @"2";
+        }else if ( tmpQuarter == @"3rd Quarter"){
+            quarter = @"3";
+        }else{
+            quarter = @"4";
+        }
+
         NSString *year = [self.years objectAtIndex:yearRow];
         
         //lets load all the mileage from the file
@@ -83,7 +95,7 @@
         [self.selectButton setTitle:@"Refresh" forState:UIControlStateNormal];
         self.timePicker.hidden = true;
         self.table.hidden = false;
-        self.quarterYearLabel.text = [[NSString alloc] initWithFormat:@"Results: %@ in Q%@ - %@", totalMiles, quarter, year];
+        self.quarterYearLabel.text = [[NSString alloc] initWithFormat:@"Results: %@ miles in Q%@ - %@", totalMiles, quarter, year];
         self.quarterYearLabel.hidden = false;
         
         
@@ -101,7 +113,7 @@
 
 - (void)viewDidLoad
 {
-    self.quarters = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", nil];
+    self.quarters = [[NSArray alloc] initWithObjects:@"1st Quarter", @"2nd Quarter", @"3rd Quarter", @"4th Quarter", nil];
     self.years = [[NSArray alloc] initWithObjects:@"2013", @"2014", @"2015", @"2016", @"2017", @"2018", @"2019", @"2020", @"2021", @"2022", @"2023", @"2024", @"2025", nil];
 
     [super viewDidLoad];
