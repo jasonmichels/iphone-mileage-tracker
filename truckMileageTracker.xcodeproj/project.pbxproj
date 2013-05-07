@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = truckMileageTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C1F082B16B9C4C600CF015B /* Mileage Plus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mileage Plus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1F082F16B9C4C600CF015B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1C1F083116B9C4C600CF015B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C1F083316B9C4C600CF015B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,7 +117,7 @@
 		1C1F082C16B9C4C600CF015B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */,
+				1C1F082B16B9C4C600CF015B /* Mileage Plus.app */,
 				1C1F085D16B9C4C700CF015B /* truckMileageTrackerTests.octest */,
 			);
 			name = Products;
@@ -208,7 +208,7 @@
 			);
 			name = truckMileageTracker;
 			productName = truckMileageTracker;
-			productReference = 1C1F082B16B9C4C600CF015B /* truckMileageTracker.app */;
+			productReference = 1C1F082B16B9C4C600CF015B /* Mileage Plus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1C1F085C16B9C4C700CF015B /* truckMileageTrackerTests */ = {
@@ -372,7 +372,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Michels (CHRG7PG8G4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Michels (CHRG7PG8G4)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -387,6 +388,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -400,7 +403,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jason Michels (TX2M624H95)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jason Michels (TX2M624H95)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -408,6 +412,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -416,11 +422,15 @@
 		1C1F087016B9C4C700CF015B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jason Michels (CHRG7PG8G4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Michels (CHRG7PG8G4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
 				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mileage Plus";
+				PROVISIONING_PROFILE = "5453B158-DA8E-4BF5-8835-C42A5E1D3EA8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5453B158-DA8E-4BF5-8835-C42A5E1D3EA8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,11 +438,15 @@
 		1C1F087116B9C4C700CF015B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jason Michels (TX2M624H95)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jason Michels (TX2M624H95)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "truckMileageTracker/truckMileageTracker-Prefix.pch";
 				INFOPLIST_FILE = "truckMileageTracker/truckMileageTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mileage Plus";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

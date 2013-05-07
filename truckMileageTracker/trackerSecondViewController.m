@@ -36,11 +36,11 @@
         NSString *quarter;
         NSString *tmpQuarter = [self.quarters objectAtIndex:quarterRow];
         
-        if( tmpQuarter == @"1st Quarter" ){
+        if( [tmpQuarter isEqual: @"1st Quarter"] ){
             quarter = @"1";
-        }else if ( tmpQuarter == @"2nd Quarter"){
+        }else if ( [tmpQuarter isEqual: @"2nd Quarter"]){
             quarter = @"2";
-        }else if ( tmpQuarter == @"3rd Quarter"){
+        }else if ( [tmpQuarter isEqual: @"3rd Quarter"]){
             quarter = @"3";
         }else{
             quarter = @"4";
@@ -78,7 +78,7 @@
             
             for ( id rowKey in row) {
                 
-                if(rowKey != @"mileage"){
+                if(![rowKey isEqual: @"mileage"]){
                     state = rowKey;
                 }else{
                     mileage = [row objectForKey:@"mileage"];

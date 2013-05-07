@@ -13,25 +13,25 @@
 
 -(void)setQuarterMonths
 {
-    if( self.quarter == @"1" ){
+    if( [self.quarter isEqual: @"1"] ){
         
         self.quarterMonthOne = @"1";
         self.quarterMonthTwo = @"2";
         self.quarterMonthThree = @"3";
         
-    }else if ( self.quarter == @"2" ){
+    }else if ( [self.quarter isEqual: @"2"] ){
         
         self.quarterMonthOne = @"4";
         self.quarterMonthTwo = @"5";
         self.quarterMonthThree = @"6";
         
-    }else if ( self.quarter == @"3" ){
+    }else if ( [self.quarter isEqual: @"3"] ){
         
         self.quarterMonthOne = @"7";
         self.quarterMonthTwo = @"8";
         self.quarterMonthThree = @"9";
         
-    }else if ( self.quarter == @"4" ){
+    }else if ( [self.quarter isEqual: @"4"] ){
         
         self.quarterMonthOne = @"10";
         self.quarterMonthTwo = @"11";

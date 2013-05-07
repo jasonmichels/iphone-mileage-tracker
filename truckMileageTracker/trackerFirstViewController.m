@@ -83,7 +83,7 @@
         [self.fileMileage addObject:newRow];
         [self.fileMileage writeToFile:[self dataFilePath] atomically:YES];
         
-        NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved.", self.statePicked, finalMileageRow] mutableCopy];
+        NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved. Select History to view quarterly summary.", self.statePicked, finalMileageRow] mutableCopy];
 
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"State & Mileage Saved" message:savedMessage delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
         
