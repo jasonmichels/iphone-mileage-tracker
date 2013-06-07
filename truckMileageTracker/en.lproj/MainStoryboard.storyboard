@@ -12,19 +12,13 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView tag="1" contentMode="scaleToFill" restorationIdentifier="" translatesAutoresizingMaskIntoConstraints="NO" id="27t-E7-D36" userLabel="StatePicker">
-                                <connections>
-                                    <outlet property="dataSource" destination="2" id="86z-aj-tX0"/>
-                                    <outlet property="delegate" destination="2" id="iy5-7l-lAa"/>
-                                </connections>
-                            </pickerView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onS-Pp-HqM">
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="LSx-gV-egb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Select State" backgroundImage="BlueButton.png">
+                                <state key="normal" title="Save Mileage" backgroundImage="BlueButton.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,44 +35,69 @@
                                     <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Ac4-eC-KTK"/>
                                 </connections>
                             </button>
-                            <pickerView hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-td-YDR" userLabel="MileagePicker">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="QMp-Z5-kmv"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="2" id="bh3-zY-nn8"/>
-                                    <outlet property="delegate" destination="2" id="ntj-QH-wa9"/>
-                                </connections>
-                            </pickerView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Chosen State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INz-8U-8xo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="State (Abbreviation or full name)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdz-zj-LwM">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-gU-s7o">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-fa-6px">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-G2-QpH">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage Tracker Plus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-pn-8Pe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Oua-Rw-wEa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="State cannot be empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-jB-JGe">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Q5p-FV-Nca"/>
+                                    <constraint firstAttribute="width" constant="171" id="j2i-N8-adi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="1Ef-bO-KsH"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="Btj-zq-jUD"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="COW-8D-3k4"/>
+                            <constraint firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0hA-on-9Ta"/>
+                            <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
+                            <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1Uy-3i-Lpn"/>
+                            <constraint firstItem="fdz-zj-LwM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Wn-M3-SGW"/>
+                            <constraint firstItem="0o4-jB-JGe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="DSV-za-24E"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gq5-jE-agv"/>
+                            <constraint firstItem="7P4-gU-s7o" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ibu-JD-7Cg"/>
+                            <constraint firstAttribute="trailing" secondItem="h5t-pn-8Pe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JHX-gJ-9Pk"/>
                             <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LCb-3E-SBF"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="W4g-FL-qIn"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mwj-7F-uIL"/>
+                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" constant="25" id="NYi-qQ-B6w"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="trailing" secondItem="7P4-gU-s7o" secondAttribute="trailing" type="default" id="U56-Pn-3KB"/>
                             <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W9D-ZD-q0P"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="f93-GS-ThO"/>
-                            <constraint firstItem="INz-8U-8xo" firstAttribute="centerX" secondItem="onS-Pp-HqM" secondAttribute="centerX" type="default" id="gVc-S0-xzJ"/>
-                            <constraint firstItem="UhO-td-YDR" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="kci-ex-YPL"/>
-                            <constraint firstAttribute="bottom" secondItem="INz-8U-8xo" secondAttribute="bottom" constant="87" id="nHA-R8-FpR"/>
-                            <constraint firstItem="27t-E7-D36" firstAttribute="bottom" secondItem="UhO-td-YDR" secondAttribute="bottom" type="default" id="qZw-w8-DZo"/>
-                            <constraint firstAttribute="bottom" secondItem="onS-Pp-HqM" secondAttribute="bottom" constant="19" id="x7K-Me-1Bs"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egI-uO-p9C"/>
+                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="16" secondAttribute="top" constant="138" id="mnX-so-MSj"/>
+                            <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mzm-g0-EK9"/>
+                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sfN-To-EuE"/>
+                            <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xAe-17-gur"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Mileage" image="segment_check.png" id="7"/>
                     <connections>
-                        <outlet property="mileagePicker" destination="UhO-td-YDR" id="gSK-l2-GvG"/>
+                        <outlet property="mileageField" destination="NZ9-G2-QpH" id="cQL-0a-3X5"/>
                         <outlet property="selectButton" destination="onS-Pp-HqM" id="sMF-1X-HNG"/>
-                        <outlet property="stateLabel" destination="INz-8U-8xo" id="vGU-7q-heA"/>
-                        <outlet property="statePicker" destination="27t-E7-D36" id="wm7-k6-k1s"/>
+                        <outlet property="stateField" destination="7P4-gU-s7o" id="DTZ-WQ-wGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -200,10 +219,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerFirstViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="outlet" name="mileagePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="mileageField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="stateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="stateField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="trackerSecondViewController" superclassName="UIViewController">
