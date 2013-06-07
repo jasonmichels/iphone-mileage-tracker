@@ -113,11 +113,17 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     self.quarters = [[NSArray alloc] initWithObjects:@"1st Quarter", @"2nd Quarter", @"3rd Quarter", @"4th Quarter", nil];
     self.years = [[NSArray alloc] initWithObjects:@"2013", @"2014", @"2015", @"2016", @"2017", @"2018", @"2019", @"2020", @"2021", @"2022", @"2023", @"2024", @"2025", nil];
 
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Get current quarter to set picker
+    NSDateFormatter *quarterOnly = [[NSDateFormatter alloc]init];
+    [quarterOnly setDateFormat:@"Q"];
+    int quarter = [[quarterOnly stringFromDate:[NSDate date]] intValue];
+    // Set quarter picker default to current quarter
+    [self.timePicker selectRow:quarter - 1 inComponent:0 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
