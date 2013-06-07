@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Tracker First View Controller - First-->
@@ -95,7 +95,7 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzw-Qx-lJL">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="0iA-Xm-aUf"/>
+                                    <constraint firstAttribute="height" constant="216" type="user" id="0iA-Xm-aUf"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="3" id="z4q-Sf-qqI"/>
@@ -127,7 +127,7 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-Ay-2YJ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="lHa-9R-JvA"/>
+                                    <constraint firstAttribute="height" constant="399" id="DM4-0C-e3K"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="3" id="lpD-mW-D5u"/>
@@ -143,11 +143,11 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WsZ-uA-DaZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ws-0a-2fy"/>
+                            <constraint firstItem="zOU-nj-OFL" firstAttribute="top" secondItem="Emi-Ay-2YJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KVd-8g-v2t"/>
                             <constraint firstItem="Emi-Ay-2YJ" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="MdD-qa-dUd"/>
                             <constraint firstItem="WsZ-uA-DaZ" firstAttribute="top" secondItem="zOU-nj-OFL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RRT-nQ-07P"/>
                             <constraint firstItem="zOU-nj-OFL" firstAttribute="centerX" secondItem="WsZ-uA-DaZ" secondAttribute="centerX" type="default" id="S1y-hB-Pyf"/>
                             <constraint firstItem="Emi-Ay-2YJ" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="XRk-DK-7h5"/>
-                            <constraint firstAttribute="bottom" secondItem="WsZ-uA-DaZ" secondAttribute="bottom" constant="19" id="dsP-y3-IkV"/>
                             <constraint firstItem="qzw-Qx-lJL" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="g0B-Co-Ij9"/>
                             <constraint firstItem="qzw-Qx-lJL" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="ioD-tf-6ck"/>
                             <constraint firstItem="WsZ-uA-DaZ" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jpV-W7-z02"/>
@@ -192,31 +192,6 @@
         <image name="BlueButtonTapped.png" width="480" height="92"/>
         <image name="segment_check.png" width="24" height="24"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="trackerFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="outlet" name="mileagePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="stateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="trackerSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonPressed:"/>
-                <relationship kind="outlet" name="quarterYearLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="timePicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
