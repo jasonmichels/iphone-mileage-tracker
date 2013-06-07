@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -8,13 +8,14 @@
         <scene sceneID="11">
             <objects>
                 <viewController title="First" id="2" customClass="trackerFirstViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="16">
+                    <view key="view" contentMode="scaleToFill" id="16" customClass="UIControl">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onS-Pp-HqM">
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.25"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="DLK-5X-xNt"/>
                                     <constraint firstAttribute="height" constant="44" id="LSx-gV-egb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -40,31 +41,36 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-gU-s7o">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-gU-s7o">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca1-fa-6px">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-G2-QpH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mileage" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-G2-QpH">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage Tracker Plus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-pn-8Pe">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="82" id="Oua-Rw-wEa"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="State cannot be empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-jB-JGe">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="State cannot be empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o4-jB-JGe">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Q5p-FV-Nca"/>
                                     <constraint firstAttribute="width" constant="171" id="j2i-N8-adi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage cannot be empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64L-AP-GH3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kqg-8b-KcJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,29 +80,37 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0hA-on-9Ta"/>
+                            <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="13W-cl-K3c"/>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
-                            <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1Uy-3i-Lpn"/>
+                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="2qX-OS-h4y"/>
+                            <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="320-Ov-L6c"/>
+                            <constraint firstItem="64L-AP-GH3" firstAttribute="leading" secondItem="0o4-jB-JGe" secondAttribute="leading" type="default" id="5t4-63-yo9"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Wn-M3-SGW"/>
-                            <constraint firstItem="0o4-jB-JGe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="DSV-za-24E"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gq5-jE-agv"/>
+                            <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HtC-3v-mGT"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ibu-JD-7Cg"/>
                             <constraint firstAttribute="trailing" secondItem="h5t-pn-8Pe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JHX-gJ-9Pk"/>
-                            <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="LCb-3E-SBF"/>
-                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mwj-7F-uIL"/>
-                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" constant="25" id="NYi-qQ-B6w"/>
-                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="trailing" secondItem="7P4-gU-s7o" secondAttribute="trailing" type="default" id="U56-Pn-3KB"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W9D-ZD-q0P"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KcI-gE-GCC"/>
+                            <constraint firstItem="64L-AP-GH3" firstAttribute="trailing" secondItem="0o4-jB-JGe" secondAttribute="trailing" type="default" id="S1Y-ci-hez"/>
                             <constraint firstItem="NZ9-G2-QpH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egI-uO-p9C"/>
-                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="16" secondAttribute="top" constant="138" id="mnX-so-MSj"/>
-                            <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mzm-g0-EK9"/>
+                            <constraint firstItem="64L-AP-GH3" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n0j-AJ-Sir"/>
+                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="h5t-pn-8Pe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="o9K-yX-xcH"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="15" id="pCL-EI-18k"/>
+                            <constraint firstItem="0o4-jB-JGe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="qsJ-me-sxU"/>
                             <constraint firstItem="h5t-pn-8Pe" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sfN-To-EuE"/>
-                            <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xAe-17-gur"/>
+                            <constraint firstAttribute="trailing" secondItem="7P4-gU-s7o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tlA-fY-hqd"/>
+                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="16" secondAttribute="top" constant="64" id="wa5-AP-Itk"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="64L-AP-GH3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x1f-aD-pse"/>
                         </constraints>
+                        <connections>
+                            <action selector="dismissKeyboard:" destination="2" eventType="touchUpInside" id="8tl-1R-DVs"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Mileage" image="segment_check.png" id="7"/>
                     <connections>
+                        <outlet property="mileageErrorLabel" destination="64L-AP-GH3" id="3HP-NK-6ca"/>
                         <outlet property="mileageField" destination="NZ9-G2-QpH" id="cQL-0a-3X5"/>
                         <outlet property="selectButton" destination="onS-Pp-HqM" id="sMF-1X-HNG"/>
+                        <outlet property="stateErrorLabel" destination="0o4-jB-JGe" id="p1V-qn-FHD"/>
                         <outlet property="stateField" destination="7P4-gU-s7o" id="DTZ-WQ-wGJ"/>
                     </connections>
                 </viewController>
@@ -219,8 +233,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerFirstViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="action" name="dismissKeyboard:"/>
+                <relationship kind="outlet" name="mileageErrorLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mileageField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stateErrorLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="stateField" candidateClass="UITextField"/>
             </relationships>
         </class>

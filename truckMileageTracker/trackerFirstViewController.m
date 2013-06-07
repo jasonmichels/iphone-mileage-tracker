@@ -13,7 +13,7 @@
 @end
 
 @implementation trackerFirstViewController
-@synthesize stateField, mileageField, mileage, states;
+@synthesize stateField, mileageField, mileage, states, stateErrorLabel, mileageErrorLabel;
 @synthesize mileageData;
 @synthesize statePicked;
 @synthesize selectButton;
@@ -22,26 +22,37 @@
 -(NSString *)dataFilePath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-//    NSLog(@"%@", documentsDirectory);
     return [documentsDirectory stringByAppendingPathComponent:kFilename];
 }
 
--(IBAction)buttonPressed:(id)sender{
+-(IBAction)buttonPressed:(id)sender
+{
+    bool *hasErrors = NO;
+    self.stateErrorLabel.hidden = true;
+    self.mileageErrorLabel.hidden = true;
     
     // Get state and mileage from textfield
-    self.statePicked = [NSString stringWithFormat:@"%@",self.stateField.text];
-    NSLog(@"Original state picked, %@", self.stateField.text);
+    self.statePicked = [NSString stringWithFormat:@"%@",self.stateField.text.capitalizedString];
+    NSLog(@"Original state picked, %@", self.statePicked);
     
     self.mileage = [NSString stringWithFormat:@"%@",self.mileageField.text];
     NSLog(@"Original mileage, %@", self.mileage);
     
     // @todo add validation for mileage and state
     if (self.statePicked.length == 0) {
-        NSLog(@"State picked is empty");
+        self.stateErrorLabel.text = @"State cannot be empty";
+        self.stateErrorLabel.hidden = false;
+        hasErrors = YES;
     }
     
     if (self.mileage.length == 0) {
-        NSLog(@"Mileage is empty");
+        self.mileageErrorLabel.text = @"Mileage cannot be empty";
+        self.mileageErrorLabel.hidden = false;
+        hasErrors = YES;
+    }
+    
+    if (hasErrors) {
+        return;
     }
     
     // convert abbreviation into long name
@@ -55,9 +66,7 @@
                 self.statePicked = [row objectForKey:@"name"];
             }
         }
-        
     }
-    
     
     //create a dictionary with an item for each number and state
     NSMutableDictionary *newRow = [NSMutableDictionary new];
@@ -94,6 +103,11 @@
     }else{
         // @todo Since no file exists show the message how to use this app
         fileMileage = [[NSMutableArray alloc] init];
+        
+        NSMutableString *message = [[ NSString stringWithFormat:@"%@. \n\n%@", @"Looks like your first time here. To get started enter your current state and current mileage on the next screen.  This will get you setup", @"Next time you come back, enter the state you are entering into and your mileage and let Mileage Plus do the rest"] mutableCopy];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:message delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
+        
+        [alert show];        
     }
     
     //get the count of fileMileages
@@ -120,6 +134,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)dismissKeyboard:(id)sender
+{
+    [self.stateField resignFirstResponder];
+    [self.mileageField resignFirstResponder];
 }
 
 @end

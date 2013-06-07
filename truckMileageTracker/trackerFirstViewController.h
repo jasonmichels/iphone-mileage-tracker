@@ -25,11 +25,15 @@
     NSString *statePicked;
     NSString *mileage;
     NSArray *states;
+    UILabel *stateErrorLabel;
+    UILabel *mileageErrorLabel;
 }
 
 @property IBOutlet UITextField *stateField;
 @property IBOutlet UITextField *mileageField;
 @property IBOutlet UIButton *selectButton;
+@property IBOutlet UILabel *stateErrorLabel;
+@property IBOutlet UILabel *mileageErrorLabel;
 @property NSString *statePicked;
 @property NSString *mileage;
 @property NSArray *states;
@@ -44,7 +48,7 @@
 //this should hold an array of probably dictionary
 @property (nonatomic, retain) NSMutableArray *fileMileage;
 
-
+- (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)buttonPressed:(id)sender;
 - (NSString *)dataFilePath;
 
