@@ -105,6 +105,7 @@
     if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){
         fileMileage = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
     }else{
+        // Since no file exists show the message how to use this app
         fileMileage = [[NSMutableArray alloc] init];
     }
     

@@ -192,6 +192,31 @@
         <image name="BlueButtonTapped.png" width="480" height="92"/>
         <image name="segment_check.png" width="24" height="24"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="trackerFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="mileagePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="trackerSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/trackerSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="quarterYearLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
