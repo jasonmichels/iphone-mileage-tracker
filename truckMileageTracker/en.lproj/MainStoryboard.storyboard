@@ -85,7 +85,7 @@
                                 </constraints>
                             </adBannerView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="centerX" secondItem="NZ9-G2-QpH" secondAttribute="centerX" type="default" id="1xu-3R-azp"/>
@@ -184,7 +184,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WsZ-uA-DaZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ws-0a-2fy"/>
                             <constraint firstItem="zOU-nj-OFL" firstAttribute="top" secondItem="Emi-Ay-2YJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KVd-8g-v2t"/>
