@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -15,7 +15,6 @@
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onS-Pp-HqM">
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="DLK-5X-xNt"/>
                                     <constraint firstAttribute="height" constant="44" id="LSx-gV-egb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -54,7 +53,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage Tracker Plus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-pn-8Pe">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage Plus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5t-pn-8Pe">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="YjS-o5-66d"/>
+                                    <constraint firstAttribute="height" constant="56" id="cu7-0r-Y5p"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,36 +73,43 @@
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Mileage cannot be empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64L-AP-GH3">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="kqg-8b-KcJ"/>
+                                    <constraint firstAttribute="height" constant="20" id="9YY-3o-x1P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-75-2mV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g6k-R6-BuO"/>
+                                </constraints>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0hA-on-9Ta"/>
-                            <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="13W-cl-K3c"/>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
-                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="2qX-OS-h4y"/>
-                            <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="320-Ov-L6c"/>
+                            <constraint firstItem="64L-AP-GH3" firstAttribute="centerX" secondItem="NZ9-G2-QpH" secondAttribute="centerX" type="default" id="1xu-3R-azp"/>
+                            <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2oE-nJ-NOn"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="leading" secondItem="0o4-jB-JGe" secondAttribute="leading" type="default" id="5t4-63-yo9"/>
+                            <constraint firstItem="S2V-75-2mV" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="6Sz-do-Moc"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Wn-M3-SGW"/>
-                            <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HtC-3v-mGT"/>
+                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="h5t-pn-8Pe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AGN-V7-0ED"/>
+                            <constraint firstItem="S2V-75-2mV" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="IVQ-u8-B0m"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ibu-JD-7Cg"/>
-                            <constraint firstAttribute="trailing" secondItem="h5t-pn-8Pe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JHX-gJ-9Pk"/>
-                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KcI-gE-GCC"/>
+                            <constraint firstItem="S2V-75-2mV" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="JXx-IV-Gvq"/>
+                            <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QV2-Bv-tBa"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="trailing" secondItem="0o4-jB-JGe" secondAttribute="trailing" type="default" id="S1Y-ci-hez"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="64L-AP-GH3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TwK-5u-dof"/>
+                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="bAE-As-6Dl"/>
+                            <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="beg-Id-M4P"/>
                             <constraint firstItem="NZ9-G2-QpH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egI-uO-p9C"/>
-                            <constraint firstItem="64L-AP-GH3" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n0j-AJ-Sir"/>
-                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="h5t-pn-8Pe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="o9K-yX-xcH"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="15" id="pCL-EI-18k"/>
-                            <constraint firstItem="0o4-jB-JGe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="qsJ-me-sxU"/>
-                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sfN-To-EuE"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iED-wp-ZF7"/>
+                            <constraint firstItem="64L-AP-GH3" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lM3-Yu-8Bw"/>
+                            <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qfi-Ag-c0n"/>
+                            <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="qiM-Ys-3hH"/>
                             <constraint firstAttribute="trailing" secondItem="7P4-gU-s7o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tlA-fY-hqd"/>
-                            <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="16" secondAttribute="top" constant="64" id="wa5-AP-Itk"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="64L-AP-GH3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x1f-aD-pse"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPR-Vp-Kr2"/>
                         </constraints>
                         <connections>
                             <action selector="dismissKeyboard:" destination="2" eventType="touchUpInside" id="8tl-1R-DVs"/>
@@ -107,6 +117,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Mileage" image="segment_check.png" id="7"/>
                     <connections>
+                        <outlet property="bannerView" destination="S2V-75-2mV" id="wpa-65-Ued"/>
                         <outlet property="mileageErrorLabel" destination="64L-AP-GH3" id="3HP-NK-6ca"/>
                         <outlet property="mileageField" destination="NZ9-G2-QpH" id="cQL-0a-3X5"/>
                         <outlet property="selectButton" destination="onS-Pp-HqM" id="sMF-1X-HNG"/>
@@ -234,6 +245,7 @@
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
                 <relationship kind="action" name="dismissKeyboard:"/>
+                <relationship kind="outlet" name="bannerView" candidateClass="ADBannerView"/>
                 <relationship kind="outlet" name="mileageErrorLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mileageField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="selectButton" candidateClass="UIButton"/>

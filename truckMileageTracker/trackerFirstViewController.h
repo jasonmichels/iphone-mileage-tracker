@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
 #define kFilename @"mileage.plist"
 #define state @"state"
@@ -15,6 +16,7 @@
 #define zero @"0"
 
 @interface trackerFirstViewController : UIViewController
+<ADBannerViewDelegate>
 {
     NSArray *mileageData;
     NSMutableArray *fileMileage;
@@ -27,6 +29,9 @@
     NSArray *states;
     UILabel *stateErrorLabel;
     UILabel *mileageErrorLabel;
+    
+    ADBannerView *bannerView;
+    BOOL *bannerIsVisible;
 }
 
 @property IBOutlet UITextField *stateField;
@@ -34,9 +39,11 @@
 @property IBOutlet UIButton *selectButton;
 @property IBOutlet UILabel *stateErrorLabel;
 @property IBOutlet UILabel *mileageErrorLabel;
+@property IBOutlet ADBannerView *bannerView;
 @property NSString *statePicked;
 @property NSString *mileage;
 @property NSArray *states;
+@property BOOL *bannerIsVisible;
 
 
 

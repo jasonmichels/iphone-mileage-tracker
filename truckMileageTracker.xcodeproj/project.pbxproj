@@ -22,6 +22,7 @@
 		1C1F086916B9C4C700CF015B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F086716B9C4C700CF015B /* InfoPlist.strings */; };
 		1C1F086C16B9C4C700CF015B /* truckMileageTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */; };
 		1C589BC316BCB4EF00F7714D /* states.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C589BC216BCB4EF00F7714D /* states.plist */; };
+		1C5E4E5A1765424700D02FD5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5E4E591765424700D02FD5 /* iAd.framework */; };
 		1C93570916C0746E0077A548 /* MileageStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C93570816C0746E0077A548 /* MileageStats.m */; };
 		1CF8C8F616C306B400C599C2 /* BlueButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF8C8F516C306B400C599C2 /* BlueButton.png */; };
 		1CF8C8F816C3071900C599C2 /* BlueButtonTapped.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF8C8F716C3071900C599C2 /* BlueButtonTapped.png */; };
@@ -67,6 +68,7 @@
 		1C1F086A16B9C4C700CF015B /* truckMileageTrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = truckMileageTrackerTests.h; sourceTree = "<group>"; };
 		1C1F086B16B9C4C700CF015B /* truckMileageTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = truckMileageTrackerTests.m; sourceTree = "<group>"; };
 		1C589BC216BCB4EF00F7714D /* states.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = states.plist; sourceTree = "<group>"; };
+		1C5E4E591765424700D02FD5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		1C93570716C0746E0077A548 /* MileageStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MileageStats.h; sourceTree = "<group>"; };
 		1C93570816C0746E0077A548 /* MileageStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MileageStats.m; sourceTree = "<group>"; };
 		1CF8C8F516C306B400C599C2 /* BlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButton.png; path = ../BlueButton.png; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5E4E5A1765424700D02FD5 /* iAd.framework in Frameworks */,
 				1C1F083016B9C4C600CF015B /* UIKit.framework in Frameworks */,
 				1C1F083216B9C4C600CF015B /* Foundation.framework in Frameworks */,
 				1C1F083416B9C4C600CF015B /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +110,7 @@
 		1C1F082016B9C4C600CF015B = {
 			isa = PBXGroup;
 			children = (
+				1C5E4E591765424700D02FD5 /* iAd.framework */,
 				1C1F083516B9C4C700CF015B /* truckMileageTracker */,
 				1C1F086416B9C4C700CF015B /* truckMileageTrackerTests */,
 				1C1F082E16B9C4C600CF015B /* Frameworks */,

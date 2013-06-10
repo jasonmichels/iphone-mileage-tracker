@@ -13,7 +13,7 @@
 @end
 
 @implementation trackerFirstViewController
-@synthesize stateField, mileageField, mileage, states, stateErrorLabel, mileageErrorLabel;
+@synthesize stateField, mileageField, mileage, states, stateErrorLabel, mileageErrorLabel, bannerView, bannerIsVisible;
 @synthesize mileageData;
 @synthesize statePicked;
 @synthesize selectButton;
@@ -83,6 +83,8 @@
     [self.fileMileage addObject:newRow];
     [self.fileMileage writeToFile:[self dataFilePath] atomically:YES];
     
+    [self dismissKeyboard: self];
+    
     NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved. Select History to view quarterly summary.", self.statePicked, self.mileage] mutableCopy];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"State & Mileage Saved" message:savedMessage delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
@@ -94,6 +96,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    self.bannerView.delegate = self;
+    self.bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    self.bannerIsVisible = nil;
     
     //lets load all the mileage from the file
     NSString *filePath = [self dataFilePath];
@@ -133,13 +140,43 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)dismissKeyboard:(id)sender
 {
     [self.stateField resignFirstResponder];
     [self.mileageField resignFirstResponder];
+}
+
+#pragma mark ADBannerViewDelegate
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    return YES;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!self.bannerIsVisible)
+    {
+        self.bannerIsVisible = YES;
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        // Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        [UIView commitAnimations];
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    if (self.bannerIsVisible)
+    {
+        self.bannerIsVisible = NO;
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        // Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        [UIView commitAnimations];
+    }
 }
 
 @end
