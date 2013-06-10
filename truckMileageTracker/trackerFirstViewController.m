@@ -78,6 +78,8 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark Dismiss Keyboard
+
 - (IBAction)dismissKeyboard:(id)sender
 {
     [self.stateField resignFirstResponder];
