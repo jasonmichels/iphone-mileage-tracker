@@ -7,46 +7,36 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#define kFilename @"mileage.plist"
-#define state @"state"
-#define mileOne @"mileOne"
-#define mileTwo @"mileTwo"
-#define mileThree @"mileThree"
-#define mileFour @"mileFour"
-#define mileFive @"mileFive"
-#define mileSix @"mileSix"
-#define mileSeven @"mileSeven"
-#define finalMileage @"finalMileage"
-#define defaultState @"Nebraska"
-#define zero @"0"
+#import <iAd/iAd.h>
+#import "Mileage.h"
 
 @interface trackerFirstViewController : UIViewController
-<UIPickerViewDelegate, UIPickerViewDataSource>{
-    UIPickerView *statePicker;
-    NSArray *pickerData;
-    NSString *statePicked;
-    UIPickerView *mileagePicker;
-    NSArray *mileageData;
-    UILabel *stateLabel;
+<ADBannerViewDelegate>
+{   
+    UITextField *stateField;
+    UITextField *mileageField;
     UIButton *selectButton;
-    NSMutableArray *fileMileage;
+    UILabel *stateErrorLabel;
+    UILabel *mileageErrorLabel;
+    
+    ADBannerView *bannerView;
+    BOOL *bannerIsVisible;
+    
+    Mileage *mileage;
 }
 
-@property (nonatomic, retain) IBOutlet UIPickerView *statePicker;
-@property (nonatomic, retain) NSArray *pickerData;
-@property (nonatomic, retain) NSString *statePicked;
+@property IBOutlet UITextField *stateField;
+@property IBOutlet UITextField *mileageField;
+@property IBOutlet UIButton *selectButton;
+@property IBOutlet UILabel *stateErrorLabel;
+@property IBOutlet UILabel *mileageErrorLabel;
 
-@property (nonatomic, retain) IBOutlet UIPickerView *mileagePicker;
-@property (nonatomic, retain) NSArray *mileageData;
-//this should hold an array of probably dictionary
-@property (nonatomic, retain) NSMutableArray *fileMileage;
+@property IBOutlet ADBannerView *bannerView;
+@property BOOL *bannerIsVisible;
 
-@property (nonatomic, retain) IBOutlet UILabel *stateLabel;
-@property (nonatomic, retain) IBOutlet UIButton *selectButton;
+@property Mileage *mileage;
 
-
+- (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)buttonPressed:(id)sender;
-- (NSString *)dataFilePath;
 
 @end
