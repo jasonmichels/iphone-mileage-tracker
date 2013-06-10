@@ -13,18 +13,22 @@
 @end
 
 @implementation trackerFirstViewController
-@synthesize stateField, mileageField, mileage, states, stateErrorLabel, mileageErrorLabel, bannerView, bannerIsVisible;
-@synthesize mileageData;
-@synthesize statePicked;
+@synthesize stateField, mileageField, mileage, states, stateErrorLabel, mileageErrorLabel, bannerView, bannerIsVisible, state;
 @synthesize selectButton;
 @synthesize fileMileage;
 
+/**
+ Load mileage data
+ */
 -(NSString *)dataFilePath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     return [documentsDirectory stringByAppendingPathComponent:kFilename];
 }
 
+/**
+ User has clicked button to submit state and mileage
+ */
 -(IBAction)buttonPressed:(id)sender
 {
     bool *hasErrors = NO;
@@ -32,14 +36,12 @@
     self.mileageErrorLabel.hidden = true;
     
     // Get state and mileage from textfield
-    self.statePicked = [NSString stringWithFormat:@"%@",self.stateField.text.capitalizedString];
-    NSLog(@"Original state picked, %@", self.statePicked);
+    self.state = [NSString stringWithFormat:@"%@",self.stateField.text.capitalizedString];
     
     self.mileage = [NSString stringWithFormat:@"%@",self.mileageField.text];
-    NSLog(@"Original mileage, %@", self.mileage);
     
-    // @todo add validation for mileage and state
-    if (self.statePicked.length == 0) {
+    // Validation for mileage and state
+    if (self.state.length == 0) {
         self.stateErrorLabel.text = @"State cannot be empty";
         self.stateErrorLabel.hidden = false;
         hasErrors = YES;
@@ -55,37 +57,38 @@
         return;
     }
     
-    // convert abbreviation into long name
-    if (self.statePicked.length == 2) {
+    // Convert abbreviation into long name
+    if (self.state.length == 2) {
         // Loop through states until find a match then set the state picked to the long version
         for (NSUInteger i = 0; i < [self.states count]; i++) {
             // Create new dictionary from row in array
             NSDictionary *row = [self.states objectAtIndex:i];
             
-            if ([self.statePicked.uppercaseString isEqualToString:[row objectForKey:@"abbreviation"]]) {
-                self.statePicked = [row objectForKey:@"name"];
+            if ([self.state.uppercaseString isEqualToString:[row objectForKey:@"abbreviation"]]) {
+                self.state = [row objectForKey:@"name"];
             }
         }
     }
     
-    //create a dictionary with an item for each number and state
+    // Create a dictionary with an item for each number and state
     NSMutableDictionary *newRow = [NSMutableDictionary new];
-    [newRow setObject: self.statePicked forKey: state];
-    [newRow setObject:[NSNumber numberWithInt:[self.mileage intValue]] forKey:finalMileage];
+    [newRow setObject: self.state forKey: stateKey];
+    [newRow setObject:[NSNumber numberWithInt:[self.mileage intValue]] forKey:finalMileageKey];
     
-    //save the date information
+    // Save the date information
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
     [newRow setObject: [NSString stringWithFormat:@"%d", [components day]] forKey: @"day"];
     [newRow setObject: [NSString stringWithFormat:@"%d", [components month]] forKey: @"month"];
     [newRow setObject: [NSString stringWithFormat:@"%d", [components year]] forKey: @"year"];
     
-    //add the dictionary to the array before saving to file
+    // Add the dictionary to the array before saving to file
     [self.fileMileage addObject:newRow];
     [self.fileMileage writeToFile:[self dataFilePath] atomically:YES];
     
     [self dismissKeyboard: self];
     
-    NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved. Select History to view quarterly summary.", self.statePicked, self.mileage] mutableCopy];
+    // Show save message alert box
+    NSMutableString *savedMessage = [[ NSString stringWithFormat:@"Your state of %@ and mileage of %@ have been saved. Select History to view quarterly summary.", self.state, self.mileage] mutableCopy];
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"State & Mileage Saved" message:savedMessage delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
     
@@ -93,45 +96,35 @@
     
 }
 
+/**
+ The view did load so run some setup code
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    // Setup the iAd banner
     self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     self.bannerView.delegate = self;
     self.bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
     self.bannerIsVisible = nil;
     
-    //lets load all the mileage from the file
+    // Lets load all the mileage from the file
     NSString *filePath = [self dataFilePath];
     
     if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){
         fileMileage = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
     }else{
-        // @todo Since no file exists show the message how to use this app
         fileMileage = [[NSMutableArray alloc] init];
         
+        // Since first time using app show the alert message how to run the app
         NSMutableString *message = [[ NSString stringWithFormat:@"%@. \n\n%@", @"Looks like your first time here. To get started enter your current state and current mileage on the next screen.  This will get you setup", @"Next time you come back, enter the state you are entering into and your mileage and let Mileage Plus do the rest"] mutableCopy];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome" message:message delegate:nil cancelButtonTitle:@"Continue" otherButtonTitles:nil, nil];
         
         [alert show];        
     }
     
-    //get the count of fileMileages
-    NSInteger fileMileageCount = [self.fileMileage count];
-    NSString *savedMileage;
-    
-    if(fileMileageCount > 0){
-        //now get the last mileage
-        NSDictionary *lastMileage = [ fileMileage objectAtIndex:(fileMileageCount - 1)];
-        //this savedState will come from database previous choice
-        savedMileage = [lastMileage objectForKey:finalMileage];
-        
-    }else{
-        savedMileage = @"0";
-    }
-    
-    //get list of states to show in picker
+    // Pre-load the list of states
     NSString *statesPath = [[NSBundle mainBundle] pathForResource:
                             @"states" ofType:@"plist"];
     self.states = [[NSArray alloc] initWithContentsOfFile:statesPath];
@@ -157,8 +150,7 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    if (!self.bannerIsVisible)
-    {
+    if (!self.bannerIsVisible) {
         self.bannerIsVisible = YES;
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         // Assumes the banner view is just off the bottom of the screen.
@@ -169,8 +161,7 @@
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
-    if (self.bannerIsVisible)
-    {
+    if (self.bannerIsVisible) {
         self.bannerIsVisible = NO;
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         // Assumes the banner view is placed at the bottom of the screen.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -87,28 +87,28 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0hA-on-9Ta"/>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="centerX" secondItem="NZ9-G2-QpH" secondAttribute="centerX" type="default" id="1xu-3R-azp"/>
-                            <constraint firstAttribute="trailing" secondItem="onS-Pp-HqM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2oE-nJ-NOn"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="leading" secondItem="0o4-jB-JGe" secondAttribute="leading" type="default" id="5t4-63-yo9"/>
                             <constraint firstItem="S2V-75-2mV" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="6Sz-do-Moc"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Wn-M3-SGW"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="h5t-pn-8Pe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AGN-V7-0ED"/>
-                            <constraint firstItem="S2V-75-2mV" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="IVQ-u8-B0m"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ibu-JD-7Cg"/>
                             <constraint firstItem="S2V-75-2mV" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="JXx-IV-Gvq"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="centerX" secondItem="S2V-75-2mV" secondAttribute="centerX" type="default" id="M1e-tq-S8y"/>
+                            <constraint firstItem="7P4-gU-s7o" firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" type="default" id="NvC-Zw-fVp"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QV2-Bv-tBa"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="trailing" secondItem="0o4-jB-JGe" secondAttribute="trailing" type="default" id="S1Y-ci-hez"/>
                             <constraint firstItem="onS-Pp-HqM" firstAttribute="top" secondItem="64L-AP-GH3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TwK-5u-dof"/>
+                            <constraint firstItem="onS-Pp-HqM" firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" type="default" id="YSW-rg-wW3"/>
                             <constraint firstItem="h5t-pn-8Pe" firstAttribute="centerX" secondItem="7P4-gU-s7o" secondAttribute="centerX" type="default" id="bAE-As-6Dl"/>
                             <constraint firstItem="0o4-jB-JGe" firstAttribute="top" secondItem="7P4-gU-s7o" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="beg-Id-M4P"/>
                             <constraint firstItem="NZ9-G2-QpH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="egI-uO-p9C"/>
                             <constraint firstItem="NZ9-G2-QpH" firstAttribute="top" secondItem="Ca1-fa-6px" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iED-wp-ZF7"/>
+                            <constraint firstItem="NZ9-G2-QpH" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="irO-Aq-j82"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="top" secondItem="NZ9-G2-QpH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lM3-Yu-8Bw"/>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="top" secondItem="0o4-jB-JGe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qfi-Ag-c0n"/>
                             <constraint firstItem="h5t-pn-8Pe" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="qiM-Ys-3hH"/>
-                            <constraint firstAttribute="trailing" secondItem="7P4-gU-s7o" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tlA-fY-hqd"/>
                             <constraint firstItem="onS-Pp-HqM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPR-Vp-Kr2"/>
                         </constraints>
                         <connections>

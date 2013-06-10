@@ -33,6 +33,7 @@
 		1CF8C91016C3189A00C599C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF8C90F16C3189A00C599C2 /* Default-568h@2x.png */; };
 		1CF8C91216C318AB00C599C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF8C91116C318AB00C599C2 /* Default.png */; };
 		1CF8C91416C318BB00C599C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF8C91316C318BB00C599C2 /* Default@2x.png */; };
+		83B2190A1766269400BB0A48 /* Mileage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B219091766269400BB0A48 /* Mileage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		1CF8C90F16C3189A00C599C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		1CF8C91116C318AB00C599C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		1CF8C91316C318BB00C599C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		83B219081766269400BB0A48 /* Mileage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mileage.h; sourceTree = "<group>"; };
+		83B219091766269400BB0A48 /* Mileage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mileage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +113,6 @@
 		1C1F082016B9C4C600CF015B = {
 			isa = PBXGroup;
 			children = (
-				1C5E4E591765424700D02FD5 /* iAd.framework */,
 				1C1F083516B9C4C700CF015B /* truckMileageTracker */,
 				1C1F086416B9C4C700CF015B /* truckMileageTrackerTests */,
 				1C1F082E16B9C4C600CF015B /* Frameworks */,
@@ -130,6 +132,7 @@
 		1C1F082E16B9C4C600CF015B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C5E4E591765424700D02FD5 /* iAd.framework */,
 				1C1F082F16B9C4C600CF015B /* UIKit.framework */,
 				1C1F083116B9C4C600CF015B /* Foundation.framework */,
 				1C1F083316B9C4C600CF015B /* CoreGraphics.framework */,
@@ -151,6 +154,8 @@
 				1C1F083616B9C4C700CF015B /* Supporting Files */,
 				1C93570716C0746E0077A548 /* MileageStats.h */,
 				1C93570816C0746E0077A548 /* MileageStats.m */,
+				83B219081766269400BB0A48 /* Mileage.h */,
+				83B219091766269400BB0A48 /* Mileage.m */,
 			);
 			path = truckMileageTracker;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				1C1F084C16B9C4C700CF015B /* trackerFirstViewController.m in Sources */,
 				1C1F085316B9C4C700CF015B /* trackerSecondViewController.m in Sources */,
 				1C93570916C0746E0077A548 /* MileageStats.m in Sources */,
+				83B2190A1766269400BB0A48 /* Mileage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
