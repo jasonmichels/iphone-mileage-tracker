@@ -12,9 +12,6 @@
 #define kFilename @"mileage.plist"
 #define stateKey @"state"
 #define finalMileageKey @"finalMileage"
-//NSString *const kFilename = @"mileage.plist";
-//NSString *const stateKey = @"state";
-//NSString *const finalMileageKey = @"finalMileage";
 
 @interface Mileage : NSObject
 {

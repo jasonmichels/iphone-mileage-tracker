@@ -7,22 +7,13 @@
 //
 
 #import "trackerSecondViewController.h"
-#import "MileageStats.h"
 
 @interface trackerSecondViewController ()
 
 @end
 
 @implementation trackerSecondViewController
-@synthesize fileMileage, table, timePicker, quarters, years, tableResults, selectButton, quarterYearLabel;
-
--(NSString *)dataFilePath
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-//    NSLog(@"%@", documentsDirectory);
-    return [documentsDirectory stringByAppendingPathComponent:kFilename];
-}
+@synthesize table, timePicker, quarters, years, tableResults, selectButton, quarterYearLabel, mileages;
 
 -(IBAction)buttonPressed:(id)sender
 {
@@ -48,17 +39,8 @@
 
         NSString *year = [self.years objectAtIndex:yearRow];
         
-        //lets load all the mileage from the file
-        NSString *filePath = [self dataFilePath];
-        
-        if( [[NSFileManager defaultManager] fileExistsAtPath:filePath] ){
-            fileMileage = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
-        }else{
-            fileMileage = [[NSMutableArray alloc] init];
-        }
-        
         MileageStats *stats = [MileageStats new];
-        stats.mileages = self.fileMileage;
+        stats.mileages = self.mileages.fileMileage;
         stats.quarter = quarter;
         stats.year = year;
         NSMutableDictionary *finalResults = stats.execute;
@@ -124,6 +106,8 @@
     int quarter = [[quarterOnly stringFromDate:[NSDate date]] intValue];
     // Set quarter picker default to current quarter
     [self.timePicker selectRow:quarter - 1 inComponent:0 animated:YES];
+    
+    self.mileages = [[Mileage alloc] init];
 }
 
 - (void)didReceiveMemoryWarning

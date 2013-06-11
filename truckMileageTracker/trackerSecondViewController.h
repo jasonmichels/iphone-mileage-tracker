@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 Jason Michels. All rights reserved.
 //
 
-#define kFilename @"mileage.plist"
-
 #import <UIKit/UIKit.h>
+#import "MileageStats.h"
+#import "Mileage.h"
+
 #define kQuarterComponent 0
 #define kYearComponenet 1
 
 @interface trackerSecondViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource>{
-    NSMutableArray *fileMileage;
     UITableView *table;
     UIPickerView *timePicker;
     NSArray *quarters;
@@ -22,9 +22,10 @@
     NSMutableArray *tableResults;
     UIButton *selectButton;
     UILabel *quarterYearLabel;
+    
+    Mileage *mileages;
 }
 
-@property (nonatomic, retain) NSMutableArray *fileMileage;
 @property (nonatomic, retain) IBOutlet UITableView *table;
 @property (nonatomic, retain) IBOutlet UIPickerView *timePicker;
 @property (nonatomic, retain) NSArray *quarters;
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *selectButton;
 @property (nonatomic, retain) IBOutlet UILabel *quarterYearLabel;
 
-- (NSString *)dataFilePath;
+@property Mileage *mileages;
+
 - (IBAction)buttonPressed:(id)sender;
 @end
