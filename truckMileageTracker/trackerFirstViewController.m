@@ -67,6 +67,8 @@
     self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     self.bannerView.delegate = self;
     self.bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
+    self.bannerView.frame = CGRectOffset(self.bannerView.frame, 0, self.view.frame.size.height - self.bannerView.frame.size.height);
+    [self.view addSubview:self.bannerView];
     self.bannerIsVisible = nil;
     
     self.mileage = [[Mileage alloc] init];

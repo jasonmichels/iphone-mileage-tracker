@@ -38,5 +38,6 @@
 
 - (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)buttonPressed:(id)sender;
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -79,23 +79,15 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-75-2mV">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="g6k-R6-BuO"/>
-                                </constraints>
-                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ca1-fa-6px" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M5-Vx-q0E"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="centerX" secondItem="NZ9-G2-QpH" secondAttribute="centerX" type="default" id="1xu-3R-azp"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="leading" secondItem="0o4-jB-JGe" secondAttribute="leading" type="default" id="5t4-63-yo9"/>
-                            <constraint firstItem="S2V-75-2mV" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="6Sz-do-Moc"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Wn-M3-SGW"/>
                             <constraint firstItem="fdz-zj-LwM" firstAttribute="top" secondItem="h5t-pn-8Pe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AGN-V7-0ED"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ibu-JD-7Cg"/>
-                            <constraint firstItem="S2V-75-2mV" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="JXx-IV-Gvq"/>
-                            <constraint firstItem="onS-Pp-HqM" firstAttribute="centerX" secondItem="S2V-75-2mV" secondAttribute="centerX" type="default" id="M1e-tq-S8y"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="trailing" secondItem="NZ9-G2-QpH" secondAttribute="trailing" type="default" id="NvC-Zw-fVp"/>
                             <constraint firstItem="7P4-gU-s7o" firstAttribute="top" secondItem="fdz-zj-LwM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QV2-Bv-tBa"/>
                             <constraint firstItem="64L-AP-GH3" firstAttribute="trailing" secondItem="0o4-jB-JGe" secondAttribute="trailing" type="default" id="S1Y-ci-hez"/>
@@ -117,7 +109,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Mileage" image="segment_check.png" id="7"/>
                     <connections>
-                        <outlet property="bannerView" destination="S2V-75-2mV" id="wpa-65-Ued"/>
                         <outlet property="mileageErrorLabel" destination="64L-AP-GH3" id="3HP-NK-6ca"/>
                         <outlet property="mileageField" destination="NZ9-G2-QpH" id="cQL-0a-3X5"/>
                         <outlet property="selectButton" destination="onS-Pp-HqM" id="sMF-1X-HNG"/>
